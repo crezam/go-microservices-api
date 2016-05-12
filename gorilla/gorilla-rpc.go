@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+	/*
+	POST {"method":"HelloService.Say","params":[{"Who":"Test"}], "id":"1"} to localhost:8080/rpc
+	 */
+
 	s := rpc.NewServer()
 	s.RegisterCodec(json.NewCodec(), "application/json")
 	s.RegisterService(new(HelloService), "")
