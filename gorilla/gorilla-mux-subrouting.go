@@ -7,7 +7,7 @@ import (
 
 func main() {
 	r := mux.NewRouter()
-	s := r.Methods("GET", "POST").Subrouter()
+	s := r.Methods("GET", "POST").Schemes("http").Subrouter().
 	s.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("OK"))
 	})
