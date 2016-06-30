@@ -13,7 +13,7 @@ func AcctHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/account/{id}", AcctHandler).
-	Methods("GET").
-	Schemes("http")
+		Methods("GET").
+		Schemes("http")
 	http.ListenAndServe(":8080", r)
 }

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"net/http"
 	"fmt"
 	"github.com/codegangsta/negroni"
+	"net/http"
 )
 
 func main() {
